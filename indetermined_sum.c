@@ -27,7 +27,7 @@ int result() {
  * If any parameter is not integer, the behavior is not defined. The program is expected to fail
  */
 
-void main (int argc, char *argv[]) {
+int main (int argc, char *argv[]) {
 
 	int first  = 0;		// Default for first variable is 0
 	int second = 0;		// Default for second variable is 0
@@ -53,6 +53,8 @@ void main (int argc, char *argv[]) {
 
 	printf ("Sum is: %d \n", surprise);
 	printf ("Do you know what just happened? And why? \n\n");
+
+	return 0;
 }
 
 

@@ -1,6 +1,6 @@
 all: charseq indetermined_sum
 
-clean: indetermined_sum charseq
+clean: 
 	rm charseq indetermined_sum
 
 charseq: charseq.c
