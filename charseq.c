@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 
 #define OFFSET 64
 
@@ -16,11 +16,10 @@
  * Start can be negative or zero (if you want to print characters before 'A')
  */
 
-int main (int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 
-	int start    = 1;		// 
-	int length   = 10;		// 
-  
+    int start = 1;   
+    int length = 10; 
 
     /*
      * The following block only parses the input and assigns the values to variables
@@ -28,39 +27,36 @@ int main (int argc, char *argv[]) {
      * Some non-numericals may be converted to zero, dependending on the implementation of strtol
      */
 
-
-	if (argc >= 3) {
-		length   = (int)strtol(argv[2],NULL,10);
-		start    = (int)strtol(argv[1],NULL,10);
-	}
-	else if (argc==2) {
-		start  = (int)strtol(argv[1],NULL,10);
-	}
+    if (argc >= 3) {
+        length = (int)strtol(argv[2], NULL, 10);
+        start = (int)strtol(argv[1], NULL, 10);
+    }
+    else if (argc == 2) {
+        start = (int)strtol(argv[1], NULL, 10);
+    }
 
     /*
      * Let's create a (short) integer arrayand create a loop to fill it in with thw characters
      * Starting with `OFFSET + start` and with `length` characters in it
      */
-    short* chars = malloc(sizeof(short) * length);
+    short *chars = malloc(sizeof(short) * length);
 
     // Fill the array with `length` consecutive integers, starting at OFFSET + `start`
     for (int i = 0; i < length; i++) {
-        chars[i] = start + i + OFFSET; 
+        chars[i] = start + i + OFFSET;
     }
 
     printf("These are the chars:\n");
-    
-    // Print elements of the array one at a time
-	for (int i = 0; i < length; i++) {
 
-         printf("%c", i[chars]);          // Does this seem odd to you?
+    // Print elements of the array one at a time
+    for (int i = 0; i < length; i++){
+
+        printf("%c", i[chars]); // Does this seem odd to you?
     }
 
     printf("\nEnd of execution.\n\n");
 
-    free(chars);    // Don't forget to free memory
+    free(chars); // Don't forget to free memory
 
-   return 0;
-}
-
-
+    return 0;
+} //main
