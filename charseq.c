@@ -41,29 +41,24 @@ int main (int argc, char *argv[]) {
      * Let's create a (short) integer arrayand create a loop to fill it in with thw characters
      * Starting with `OFFSET + start` and with `length` characters in it
      */
-    short *chars = malloc(sizeof(short) * length);
+    short* chars = malloc(sizeof(short) * length);
 
+    // Fill the array with `length` consecutive integers, starting at OFFSET + `start`
     for (int i = 0; i < length; i++) {
         chars[i] = start + i + OFFSET; 
     }
 
-    // char *textd = malloc(sizeof(char) * length);
-
-    //  for (int j = 0; j<length; j++) {
-    //      textd[j] = chars[j];
-    //  }
-
-    
     printf("These are the chars:\n");
     
+    // Print elements of the array one at a time
 	for (int i = 0; i < length; i++) {
 
          printf("%c", i[chars]);          // Does this seem odd to you?
     }
+
     printf("\nEnd of execution.\n\n");
 
-    free(chars);
-    // free(textd);
+    free(chars);    // Don't forget to free memory
 
    return 0;
 }
