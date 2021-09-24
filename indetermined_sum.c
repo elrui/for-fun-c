@@ -13,7 +13,7 @@ void receive(int number1, int number2) {
 int result() {
 	/*
 	 * Takes no parameter, declares an integer variable without initialization
-	 * Returns that variable (undetermined)
+	 * Returns that variable (indetermined)
 	 */
 
 	int x;
@@ -46,7 +46,7 @@ void main (int argc, char *argv[]) {
 		first = (int)strtol(argv[1],NULL,10); 
 	}
 
-    // Now we call the two functions we defined above. Results 'should' be undetermined... or should it?
+    // Now we call the two functions we defined above. Result 'should' be indetermined... or should it?
 
 	receive(first, second);
 	int surprise = result();
