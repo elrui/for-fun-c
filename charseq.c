@@ -54,6 +54,7 @@ int main (int argc, char *argv[]) {
 	for (int i = 0; i < length; i++) {
 
          printf("%c", i[chars]);          // Does this seem odd to you?
+    }
 
     printf("\nEnd of execution.\n\n");
 
